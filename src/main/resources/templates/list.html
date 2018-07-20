@@ -26,7 +26,7 @@
 			id="navbarSupportedContent">
 			<ul class="nav">
 				<li class="nav-item"><a class="nav-link" href="./form.html">회원가입</a></li>
-				<li class="nav-item"><a class="nav-link" href="./list.html">사용자목록</a></li>
+				<li class="nav-item"><a class="nav-link" href="./list">사용자목록</a></li>
 
 			</ul>
 		</div>
@@ -36,31 +36,19 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">First</th>
-					<th scope="col">Last</th>
-					<th scope="col">Handle</th>
+					<th scope="col">아이디</th>
+					<th scope="col">이름</th>
+					<th scope="col">이메일</th>
 				</tr>
 			</thead>
 			<tbody>
+			{{#users}}
 				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
+					<td>{{userId}}</td>
+					<td>{{name}}</td>
+					<td>{{email}}</td>
 				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-				</tr>
+			{{/users}}
 			</tbody>
 		</table>
 	</div>
