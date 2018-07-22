@@ -13,7 +13,6 @@ public class User {
 	
 	@Column(nullable=false)
 	private String userId;
-	
 	private String name;
 	private String password;
 	private String email;
