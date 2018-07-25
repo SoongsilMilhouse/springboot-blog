@@ -16,6 +16,28 @@ public class User {
 	private String name;
 	private String password;
 	private String email;
+	
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
 
 	public void setUserId(String userId) {
 		this.userId = userId;
