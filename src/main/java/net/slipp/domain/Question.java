@@ -2,14 +2,16 @@ package net.slipp.domain;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 
 @Entity
 public class Question {
@@ -23,9 +25,14 @@ public class Question {
 	
 	private String title;
 	
+	@Lob
 	private String contents;
 
 	private LocalDateTime createDate;
+	
+	@OneToMany(mappedBy = "question")
+	@OrderBy("id ASC")
+	private List<Answer> answers;
 	
 	public Question() {}
 	

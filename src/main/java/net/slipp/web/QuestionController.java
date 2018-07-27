@@ -98,4 +98,6 @@ public class QuestionController {
 		questionRepository.deleteById(id);
 		return "redirect:/";
 	}
+	
+	
 }
